@@ -1,8 +1,13 @@
-<!DOCTYPE html>
-<title>PlayStation 4 goldHen host MichaelCL13</title>
+<html manifest="Cache.manifest">
+
+<head>
+    <meta charset="utf-8" />
+    <title>GoldHen Host Menu</title>
+    <link rel="shortcut icon" href="favicon.ico"></link>
+</head>   
 <style>
 html, body {
-background-image: url('img/img.jpg');
+background-image: url('img.jpg');
 background-attachment: fixed;
 background-size:100%;
 background-repeat:no-repeat;
@@ -13,122 +18,35 @@ margin-left: 0px;
 margin-right: 0px;
 overflow: hidden;
 }
-h1 {
-text-shadow: 0.1em 0.1em 0.2em black;
-font-size:25px;
-text-align:center;
-color:white;
-}
-.btn {
-width: 262px;
-height: 49px;
-padding-top: 10px;
-padding-bottom: 13px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 20px;
-margin-top: 15px;
-margin-bottom: 5px;
-margin-left: 15px;
-margin-right: 5px;
-border-bottom-width: 0px;
-border-right-width: 0px;
-border-top-width: 0px;
-border-left-width: 0px;
--webkit-transition-duration: 0.4s;
-transition-duration: 0.4s;
-cursor: pointer;
-}
-.btn-main {
-background-color: #3D3D3D;
-color: white;
-border-radius: 10px;
-}
-.btn-main:hover {
-box-shadow: 0 5px 50px 0 #3B9AAF;
-background-color: #1B978B;
-color: white;
-    border-radius: 10px;
-}
 </style>
-</head>
-<h1 id=msgs>PlayStation 4 goldHen host MichaelCL13</h1>
+<script>
+function CacheProgress(e){Percent=(Math.round(e.loaded / e.total * 100));parent.msgs.innerHTML="Instalando Cache en el navegador: " + Percent + "%";}
+function CachingDone(){setTimeout(function(){parent.msgs.innerHTML="Instalacion del Cache Finalizada ✔";},2000);setTimeout(function(){parent.msgs.innerHTML="Ya puede desconectar la Internet y volver abrir el Navegador ...";},4000);}
+function UpdateDone(){setTimeout(function(){parent.msgs.innerHTML="Actualizacion del Cache Finalizada ✔";},2000);setTimeout(function(){parent.msgs.innerHTML="Ya puede desconectar la Internet y volver abrir el Navegador ...";},4000);}
+window.applicationCache.addEventListener("progress",CacheProgress,false);window.applicationCache.addEventListener('updateready', UpdateDone,false);window.applicationCache.oncached=function(e){CachingDone();};
+</script>
+<body style="background-color:#3462a8;color:white;font-size:20px;text-align:center;">
+<h1 style='font-size:40px;margin:0;'>goldHEn PlayStation 4 MichaelCL13 </h1>
+<h3 style='font-size:26px;margin:0;'>para Sistema 5.05</h3>
+<hr><br><br><br>
+
+<table bgcolor="transparent" cellpadding="5" cellspacing="8" border="3" width="40%" align="center">
+	<colgroup width="23%">
+	<colgroup span="2" width="22%">
+
+<h2><i><div id=msgs>Elija goldHen para jugar</h2>
+<tr align="center">
+	<td><a href="goldhen10.html"><img src="1.0.png"></a></td>
+	<td><a href="goldhen11.html"><img src="B3.png"></a></td>
+	<td><a href="goldhen11b3.html"><img src="1.1.png"></a></td>
+</tr>
+<div style="position:fixed;left:0;bottom:-8px;width:100%;font-size:16px;">
 <hr>
-<br>
-<h1 style="font-size:28px;text-align:center;color:#3B9AAF;">Elija el Sistema de su PlayStation 4</h1>
-<div style="text-align:center">
-<button class="btn btn-main" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_fmw505()> Sistema 5.05 </button>
-<button class="btn btn-main" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_fmw672()> Sistema 6.72 </button>
-<button class="btn btn-main" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_fmw702()> Sistema 7.02 </button>
-<button class="btn btn-main" onmouseover="mainpayload4()" onmouseout="pagetitle()" onclick=load_fmw755()> Sistema 7.55 </button>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<br>
-<br>
-<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-</div>
-<h1 style="font-size:25px;text-align:center;margin-top: 20px;color:#3B9AAF;">El host iniciara cache automaticamente, cuando escoja version de sistema compatible con su PS4. MichaelCL13</a>&nbsp&nbsp</h1>
-<br>
-<br>
+Para todos los jugadores de PlayStation 4 Pirata &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PS4 Firmware <span id="PS4fw"></span><hr>
 </div>
 <script>
-function mainpayload1(){
-document.getElementById("msgs").innerHTML = "host MENU para sistema 5.05";
-}
-function mainpayload2(){
-document.getElementById("msgs").innerHTML = "host MENU para sistema 6.72";
-}
-function mainpayload3(){
-document.getElementById("msgs").innerHTML = "host MENU para sistema 7.02";
-}
-function mainpayload4(){
-document.getElementById("msgs").innerHTML = "host MENU para sistema 7.55";
-}
-function pagetitle(){
-document.getElementById("msgs").innerHTML = "PlayStation 4 goldHen host MichaelCL13";
-}
-function load_fmw505(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = '505/index.html';
-        link.click();
-}
-function load_fmw672(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = '672/index.html';
-        link.click();
-}
-function load_fmw702(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = '702/index.html';
-        link.click();
-}
-function load_fmw755(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = '755/index.html';
-        link.click();
-}
-function load_morepls(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'more-plds.html';
-        link.click();
-}
+UA = navigator.userAgent.substring(navigator.userAgent.indexOf('5.0 (') + 19, navigator.userAgent.indexOf(') Apple'));
+PS4fw.innerHTML=""+UA+" Detected";
 </script>
 </body>
 </html>
